@@ -18,14 +18,20 @@ export class QuestionsService {
 
     {
       type: "800",
-      enonce: "Au 15ème siècle, quel artiste est l'auteur de la peinture connue sous le nom de 'La Cène' ?",
+      enonce: "A quel artiste doit-on la peinture connue sous le nom de 'La Cène' ?",
       status: true,
       url: "../../assets/image/cene.jpg",
       result: "Leonardo Da Vinci"
     },
-
     {
       type: "600",
+      enonce: "Combien de lettres comporte l'alphabet cyrillique ?",
+      status: true,
+      url: "../../assets/image/russie.jpg",
+      result: "32 lettres"
+    },
+    {
+      type: "400",
       enonce: "En France, sous quel président la peine de mort a-t-elle été abolie ?",
       status: true,
       url: "../../assets/image/peine.jpg",
@@ -33,16 +39,8 @@ export class QuestionsService {
     },
 
     {
-      type: "400",
-      enonce: "Combien de pays se sont déclarés neutres durant la seconde guerre mondiale ?",
-      status: true,
-      url: "../../assets/image/guerre.gif",
-      result: "4 : Portugal, Espagne, Suisse, Suède"
-    },
-
-    {
       type: "200",
-      enonce: "Quelle bête Hercule a-t-il combattu pour son 12ème et dernier travaux ?",
+      enonce: "Quelle bête Hercule a-t-il combattu pour sa 12ème et dernière tâche ?",
       status: true,
       url: "../../assets/image/hercule.jpg",
       result: "Cerbère, le chien à trois têtes"
@@ -229,7 +227,7 @@ export class QuestionsService {
 
     {
       type: "600",
-      enonce: "'Cenosillicaphobia' est la peur de...",
+      enonce: "'Cénosillicaphobie' est la peur de...",
       status: true,
       url: "../../assets/image/peur.gif",
       result: "une bière vide"
@@ -239,13 +237,13 @@ export class QuestionsService {
       type: "400",
       enonce: "Combien de coeurs a un octopus ?",
       status: true,
-      url: "../../assets/image/octopus.jpg",
+      url: "../../assets/image/octopus.gif",
       result: "3"
     },
 
     {
       type: "200",
-      enonce: "De quelle couleur étaient les pyramides de Gyza à l'origine ?",
+      enonce: "De quelle couleur étaient les pyramides de Gizeh à l'origine ?",
       status: true,
       url: "../../assets/image/pyramide.jpg",
       result: "Blanches"
@@ -277,13 +275,12 @@ export class QuestionsService {
       url: "../../assets/image/princess.png",
       result: "3"
     },
-
     {
       type: "600",
-      enonce: "Combien d'espèces de Pokemon étaient présentes dans la première génération ?",
+      enonce: "Dans Matrix, Neo prend-il la pilule rouge ou la pilule bleue ?",
       status: true,
-      url: "../../assets/image/pokemon.jpg",
-      result: "151"
+      url: "../../assets/image/pilule.JPG",
+      result: "Pilule rouge"
     },
 
     {
@@ -299,16 +296,16 @@ export class QuestionsService {
       enonce: "Dans quel thriller de 1976, le personnage de Robert de Niro prononce la phrase désormais culte : 'You talkin' to me?' ?",
       status: true,
       url: "../../assets/image/deniro.jpg",
-      result: "Rouge"
+      result: "Taxi Driver"
     },
-
     {
       type: "100",
-      enonce: "Dans Matrix, Neo prend-il la pilule rouge ou la pilule bleue ?",
+      enonce: "Combien d'espèces de Pokemon étaient présentes dans la première génération ?",
       status: true,
-      url: "../../assets/image/pilule.jpg",
-      result: "Pilule rouge"
+      url: "../../assets/image/pokemon.jpg",
+      result: "151"
     },
+
   ]
 
   quizes = [this.questionsCult, this.questionsBrain, this.questionsMusic, this.questionsNetflix, this.questionsRandom, this.questionsSports]

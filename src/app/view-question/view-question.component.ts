@@ -18,8 +18,7 @@ enonce: string = "Question";
 type: string = "";
 title: string = "Catégorie";
 url: string = "";
-
-
+reponse: string = "";
 
 
 players = this.playerService.players;
@@ -52,6 +51,7 @@ modalForm: FormGroup;
     this.enonce = this.categoriesService.getQuestionByIndex(+id, type).enonce;
     this.type = this.categoriesService.getQuestionByIndex(+id, type).type;
     this.url = this.categoriesService.getQuestionByIndex(+id, type).url;
+    this.reponse = this.categoriesService.getQuestionByIndex(+id, type).result;
     this.initForm();
   }
 
@@ -82,7 +82,7 @@ modalForm: FormGroup;
     this.playerService.emitPlayers();
     this.playerService.savePlayers();
 
-  }
+}
 
   onSubmitForm() {
     const formValue = this.modalForm.value;

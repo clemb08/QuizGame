@@ -14,6 +14,7 @@ export class PlayerService {
   playerSubject =  new Subject<User[]>();
 
 
+
   constructor() {
     this.getPlayers();
     this.emitPlayers();
@@ -60,7 +61,7 @@ export class PlayerService {
   }
 
   shutOffPlayer() {
-    let player;
+    let player: User;
     for(player of this.players) {
       player.isActive = false;
     }
