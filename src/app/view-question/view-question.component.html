@@ -1,0 +1,50 @@
+<div class="container">
+
+  <div class="title">{{ title }} - pour {{ type }} points</div>
+
+    <div class="pitch">Voici votre question :</div>
+
+     <div class="enonce col-lg-12">{{ enonce }}</div>
+     <img class="image" src="{{ url }}">
+
+     <button class="btn btn-success" (click)="onTrue()">
+       Vrai
+      </button>
+
+     <button class="btn btn-danger" (click)="openFaux(content)">
+      Faux
+    </button>
+
+    <!-- Modal -->
+        <ng-template #content let-modal>
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title col-lg-9" id="modalScoreLabel">Désolé, mauvaise réponse !</h5>
+
+                <button type="button" class="close col-lg-3" data-dismiss="modal" aria-label="Close" (click)="modal.dismiss()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="charogne"></div>
+              <div class="modal-body">
+                <h5 class="col-lg-12">Place aux charognards...</h5>
+                <form [formGroup]="modalForm" (ngSubmit)="onSubmitForm()">
+                  <div class="form-group" formArrayName="scores">
+                    <li *ngFor="let player of players; let i = index"
+                        [ngClass]="{'list-group-item': true,
+                        'disabled': player.isActive === true}"
+
+                       (onCreate)="onAddScore()">
+                      <label for="scores">{{ player.name }}</label>
+                      <input type="text" id="scores" class="form-control" [formControlName]="i">
+                    </li>
+                  </div>
+                  <button type="button" class="btn btn-secondary" (click)="modal.dismiss()">Close</button>
+                  <button type="submit" class="btn btn-primary" (click)="modal.close()">Accorder les points</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+</div>

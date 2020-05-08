@@ -1,0 +1,73 @@
+.title {
+  font-size: 3em;
+  text-align: center;
+}
+
+.pitch {
+  font-size: 2em;
+
+}
+
+.modal-dialog {
+  position: absolute;
+  top: 10%;
+}
+
+button {
+  margin: 2%;
+}
+
+.enonce {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: lightgrey;
+  border: midnightblue 2px ridge;
+  box-shadow: 1px black;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  padding: 1%;
+  height: 50%;
+  width: 80%;
+  font-size: 1.5em;
+  transform: scale(0);
+  transform-origin: left;
+  animation: question 2000ms forwards;
+  animation-delay: 2000ms;
+}
+
+.image {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-title {
+  text-align: center;
+}
+
+.charogne {
+  background-image: url("../../assets/image/charogne.jpg");
+  background-size: contain;
+  height: 100px;
+  width: 100%;
+}
+
+
+@-webkit-keyframes question {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform : scale(1);
+  }
+}
+
+@-webkit-keyframes reoponse{
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform : scaleY(1);
+  }
+}

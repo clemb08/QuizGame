@@ -1,0 +1,24 @@
+<div class="singleCategory">
+  <h2>{{ title }}</h2>
+    <h3>Choisissez votre question :</h3>
+      <ul class="list-group">
+        <a [ngClass]="{'question': true,
+        'disabled': question.status === false}"
+        *ngFor="let question of quiz; let i = index"
+        [routerLink]="[question.type]"
+        (click)="onChoice(question.type)">
+          <div [ngClass]="{
+          'questionOne' : question.type === '1000',
+          'questionTwo': question.type === '800',
+          'questionThree': question.type === '600',
+          'questionFour': question.type === '400',
+          'questionFive': question.type === '200',
+          'questionSix': question.type === '100'}" class="nomQuestion">
+            {{ question.type}}
+          </div>
+        </a>
+
+      </ul>
+  <a routerLink="/board">Retour aux catégories</a>
+</div>
+

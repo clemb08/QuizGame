@@ -1,0 +1,168 @@
+
+.container {
+  width: 100%;
+}
+
+.singleCategory {
+  text-align: center;
+}
+
+.question {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  background-color:whitesmoke;
+
+  margin: 1%;
+  text-align: center;
+    &:hover .questionSix {
+      filter: brightness(150%);
+      -webkit-animation: six 2s ease-in-out;
+    }
+}
+
+.disabled  {
+  display: none;
+}
+
+
+.nomQuestion {
+  width: 100%;
+  margin: 0;
+  font-family: 'burgerQuiz';
+  font-size: 2em;
+  background-color:rgba(31,42,54,1);
+  text-align: center;
+  color: whitesmoke;
+}
+
+.glyphicon-chevron-right {
+  position: relative;
+  top: 50%;
+  right: 1%;
+  margin-top: 0.7%;
+  font-size: 1em;
+  color: whitesmoke;
+}
+
+.questionOne {
+  width: 100%;
+    &:hover {
+      filter: brightness(150%);
+      transform: scale(1.5);
+      z-index: 2;
+      transition: 1s cubic-bezier(0.68, -0.80, 1, 2);
+    }
+}
+
+.questionTwo {
+  width: 80%;
+    &:hover {
+      filter: brightness(150%);
+      -webkit-animation: quatre 500ms;
+    }
+}
+
+.questionThree {
+  width: 60%;
+    &:hover {
+      filter: brightness(150%);
+      -webkit-animation: quatre 500ms;
+    }
+}
+
+.questionFour {
+  width: 40%;
+  &:hover {
+    filter: brightness(150%);
+    -webkit-animation: quatre 500ms;
+  }
+}
+
+.questionFive {
+  width: 20%;
+    &:hover {
+      filter: brightness(150%);
+      -webkit-animation: quatre 500ms;
+    }
+}
+
+.questionSix {
+  width: 10%;
+  transform-origin: bottom left;
+}
+
+
+@-webkit-keyframes deux { /* Safari, Opera, Chrome */
+  0% {
+      transform: translateX(5px);
+  }
+  25% {
+      transform: translateX(-5px), translateY(5px);
+  }
+
+  50% {
+      transform: translateX(5px), translateY(-5px);
+  }
+  75% {
+      transform: translateX(-5px), translateY(5px);
+  }
+
+  100% {
+      transform: translateX(5px);
+  }
+}
+
+
+@-webkit-keyframes trois { /* Safari, Opera, Chrome */
+  0% {
+      transform: translateX(5px);
+  }
+
+  50% {
+      transform: translateX(-5px);
+  }
+
+  100% {
+      transform: translateX(5px);
+  }
+}
+
+@-webkit-keyframes quatre { /* Safari, Opera, Chrome */
+  0% {
+      transform: scale(1);
+  }
+
+  50% {
+      transform: scale(1.2);
+  }
+
+  100% {
+      transform: scale(1);
+  }
+}
+
+@-webkit-keyframes six { /* Safari, Opera, Chrome */
+  0% {
+    box-shadow: black 1px;
+  }
+  20% {
+    rotate: (10deg);
+  }
+
+  40% {
+    rotate: (110deg);
+  }
+  60% {
+    rotate: (60deg);
+  }
+  75% {
+    rotate: (90deg);
+  }
+  90% {
+    rotate: (80deg);
+  }
+  100% {
+    rotate: (90deg);
+  }
+}

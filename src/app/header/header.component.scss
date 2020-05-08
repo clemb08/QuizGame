@@ -1,0 +1,50 @@
+.header {
+  box-shadow: 0px 0px 10px 2px rgba(74, 140, 145, 1);
+}
+
+.skyLine {
+  height: 250px;
+  font-family: "burgerQuiz";
+  font-size: 5em;
+  background-color: rgb(130, 205, 240);
+  text-align: center;
+}
+
+.corona {
+  color: rgb(43, 43, 151);
+}
+
+.q {
+  color: red;
+}
+
+.u {
+  color: yellow;
+}
+
+.navbar {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	padding: 0;
+	white-space: nowrap;
+  background: linear-gradient(156deg, rgba(31,42,54,1) 50%, rgba(117,122,150,1) 100%);
+	text-decoration: none;
+
+	&__ul {
+		margin-left: 2%;
+	}
+
+	&__li {
+    display: inline-block;
+    margin: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: whitesmoke;
+    text-decoration: none;
+		&:hover {
+
+			background-color: #667882;
+		}
+  }
+}
