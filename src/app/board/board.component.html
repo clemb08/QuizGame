@@ -1,7 +1,13 @@
 <button class="demarrer btn btn-dark" (click)="onStart()">Démarrer Partie</button>
-<div class="players col-xl-12">
+<div id="classement" class="players col-xl-12">
 
+  <div id="loading" class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
+<div id="player">
   <div class="item-player col-xl-2" *ngFor="let player of players; let i = index;"
       [ngClass]="{
         'actif': player.isActive === true,
@@ -15,6 +21,7 @@
     <div class="icon">{{ player.icon}}</div>
     <div class="player">{{ player.name }}</div>
     <div class="score">{{ player.score}}</div>
+  </div>
   </div>
 
   </div>

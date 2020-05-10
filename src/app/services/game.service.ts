@@ -19,16 +19,8 @@ export class GameService {
     console.log("tout le monde à zéro");
     this.questionService.activeQuestion();
     this.playerService.shutOffPlayer();
-    this.playerService.players.forEach (player => {
-      if (player.index === 1) {
-        player.isActive = true;
-        console.log(player.name);
-        console.log(player.isActive);
-      }
-    });
+    this.playerService.giveFirst();
     this.playerService.emitPlayers();
     this.playerService.savePlayers();
   }
-
-
 }

@@ -29,9 +29,6 @@ player = this.players.find(
     }
   });
 
-
-
-
 modalForm: FormGroup;
 
   constructor(
@@ -68,7 +65,6 @@ modalForm: FormGroup;
   onAddScore() {
     const newScoreControl = this.formBuilder.control(null);
     this.getScores().push(newScoreControl);
-
   }
 
   message :string = "Bien joué " + this.player.name + ", tu viens de remporter " + this.route.snapshot.params['type'] + " points !";
@@ -81,7 +77,6 @@ modalForm: FormGroup;
     this.playerService.getNextPlayer();
     this.playerService.emitPlayers();
     this.playerService.savePlayers();
-
 }
 
   onSubmitForm() {

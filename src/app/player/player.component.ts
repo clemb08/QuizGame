@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, Output } from '@angular/core';
 import { User } from '../models/User';
 import { Subscription } from 'rxjs';
 import { PlayerService } from '../services/player.service';
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   templateUrl: './player.component.html',
   styleUrls: ['./player.component.scss']
 })
-export class PlayerComponent implements OnInit {
+export class PlayerComponent implements OnInit, OnDestroy {
 
   players: User[];
   playersSubscription: Subscription;
@@ -36,6 +36,10 @@ export class PlayerComponent implements OnInit {
 
   onAddPlayer() {
     this.route.navigate(['newUser']);
+  }
+
+  ngOnDestroy(){
+    this.playersSubscription.unsubscribe();
   }
 
 }

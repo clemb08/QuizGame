@@ -28,7 +28,7 @@ export class QuestionsService {
       enonce: "Combien de lettres comporte l'alphabet cyrillique ?",
       status: true,
       url: "../../assets/image/russie.jpg",
-      result: "32 lettres"
+      result: "30 lettres"
     },
     {
       type: "400",
@@ -155,7 +155,6 @@ export class QuestionsService {
       url: "../../assets/image/bolt.jpg",
       result: "Jamaïque"
     },
-
   ]
 
   questionsBrain: Question[]= [

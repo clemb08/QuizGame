@@ -13,8 +13,6 @@ export class PlayerService {
   public players: User[] = [];
   playerSubject =  new Subject<User[]>();
 
-
-
   constructor() {
     this.getPlayers();
     this.emitPlayers();
@@ -36,6 +34,22 @@ export class PlayerService {
 
   getIndex(user: User) {
     user.index = this.players.length + 1;
+  }
+
+  hasard(max: number) {
+    return 1+Math.floor(Math.random()*(max-1+1));
+  }
+
+  giveFirst(){
+    let first = this.hasard(this.players.length);
+    const firstPlayer = this.players.find(
+      (playerEL) =>{
+        if(playerEL.index === first) {
+          return true;
+        }
+      }
+    );
+    firstPlayer.isActive = true;
   }
 
   getPlayers() {
@@ -102,8 +116,8 @@ export class PlayerService {
     console.log(newPlayer.isActive);
   }
 
-  sortedByPoints(arr: User[]) {
-    arr.sort(function(a, b) {
+  sortedByPoints(players: User[]) {
+    players.sort(function(a, b) {
       return b.score-a.score;
     });
   }
