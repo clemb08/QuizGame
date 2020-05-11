@@ -30,7 +30,7 @@ button {
   height: 50%;
   width: 80%;
   font-size: 1.5em;
-  transform: scale(0);
+  transform: translateX(-150%);
   transform-origin: left;
   animation: question 2000ms forwards;
   animation-delay: 2000ms;
@@ -56,10 +56,22 @@ button {
 
 @-webkit-keyframes question {
   0% {
-    transform: scale(0);
+    transform: translateX(-150%);
+  }
+  75%{
+    transform: translateX(40%);
+  }
+  85%{
+    transform: translateX(40%);
+  }
+  85% {
+    transform: translateX(50%);
+  }
+  87% {
+    transform: translateX(50%);
   }
   100% {
-    transform : scale(1);
+    transform : translateX(0%);
   }
 }
 

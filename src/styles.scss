@@ -1,6 +1,6 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import './assets/scss/font.scss';
-
+@import '~ngx-toastr/toastr';
 
 .container {
   max-width: 2000px;

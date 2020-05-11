@@ -23,4 +23,5 @@ export class PointsService {
     }
     this.playerService.emitPlayers();
   }
+
 }

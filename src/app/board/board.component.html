@@ -1,7 +1,7 @@
 <button class="demarrer btn btn-dark" (click)="onStart()">Démarrer Partie</button>
 <div id="classement" class="players col-xl-12">
 
-  <div id="loading" class="loader">
+  <div [@loader]="showLoad ? true : false" id="loading" class="loader">
     <span></span>
     <span></span>
     <span></span>
