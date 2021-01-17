@@ -1,0 +1,47 @@
+<button class="demarrer btn btn-dark" (click)="onStart()">Démarrer Partie</button>
+<div id="classement" class="players col-xl-12">
+
+<div id="player">
+  <div class="item-player col-xl-2" *ngFor="let player of players; let i = index;"
+      [ngClass]="{
+        'actif': player.isActive === true,
+        'playerOne': i === 0,
+        'playerTwo': i === 1,
+        'playerThree': i === 2,
+        'playerFour': i === 3,
+        'playerFive': i === 4,
+        'playerSix': i === 5
+      }">
+    <div class="icon">{{ player.icon}}</div>
+    <div class="player">{{ player.name }}</div>
+    <div class="score">{{ player.score}}</div>
+  </div>
+  </div>
+
+  </div>
+
+
+<div clas="list-categories">
+  <div class="row col-xl-12">
+
+        <a [ngClass]="{
+            'catOne': category.id === 1,
+            'catTwo': category.id === 2,
+            'catThree': category.id === 3,
+            'catFour': category.id === 4,
+            'catFive': category.id === 5,
+            'catSix': category.id === 6
+          }"
+          class="item col-xl-3" *ngFor="let category of categories; let i = index" [routerLink]="[category.id]">
+          <div class="square">
+            <div class="title align-middle">{{ category.title }}</div>
+          </div>
+        </a>
+
+
+      </div>
+  </div>
+
+<script>
+
+</script>
