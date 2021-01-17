@@ -45,3 +45,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+authQuiz/src/main/resources/application.properties
