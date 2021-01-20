@@ -7,10 +7,14 @@ import { ViewQuestionComponent } from './view-question/view-question.component';
 import { PlayerComponent } from './player/player.component';
 import { componentFactoryName } from '@angular/compiler';
 import { NewUserComponent } from './new-user/new-user.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'board', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home',
+    component: HomeComponent,
+  },
   { path: 'board',
     component: BoardComponent,
   },

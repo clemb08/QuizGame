@@ -5,6 +5,8 @@ import { CommonModule } from "@angular/common"
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { ToastrModule } from 'ngx-toastr';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +19,7 @@ import * as firebase from 'firebase';
 import { HeaderComponent } from './header/header.component';
 import { NewUserComponent } from './new-user/new-user.component';
 import { OnCreate } from './on-create.directive';
+import { HomeComponent } from './home/home.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCysLA6NHyOkmQ91mcfRhKgyAc-FHYEBF4",
@@ -40,6 +43,7 @@ firebase.initializeApp(firebaseConfig);
     HeaderComponent,
     NewUserComponent,
     OnCreate,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +52,8 @@ firebase.initializeApp(firebaseConfig);
     ReactiveFormsModule,
     CommonModule,
     BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
     ToastrModule.forRoot({
       timeOut: 5000,
       positionClass: 'toast-bottom-full-width',
